@@ -20,7 +20,7 @@
   (
   reader_id int, 
   reader_name varchar(20), 
-  phone_no int, 
+  phone_no varchar(13), 
   joinned_date date
   );
   alter table reader add primary key(reader_id);
@@ -43,7 +43,10 @@
   
   create table reservation 
   (
-  reservation_id int primary key, book_id int, reader_id int, reservation_date date, foreign key(book_id) references book(book_id) 
+  reservation_id int primary key, 
+  book_id int, reader_id int, 
+  reservation_date date, 
+  foreign key(book_id) references book(book_id) 
   );
   alter table reservation add foreign key(reader_id) references reader(reader_id);
   
@@ -53,7 +56,12 @@
   
   create table fine
   (
-  fine_id int primary key, reader_id int, borrow_id int, fine_date date, fine_amount int, foreign key(borrow_id) references borrow(borrow_id) 
+  fine_id int primary key, 
+  reader_id int, 
+  borrow_id int, 
+  fine_date date, 
+  fine_amount int, 
+  foreign key(borrow_id) references borrow(borrow_id) 
   );
   alter table fine add foreign key(reader_id) references reader(reader_id);
   
@@ -88,16 +96,16 @@
   /* Reader Table Entry    */
   
   insert into reader values
-  (2315, 'Aakash', 6789678329),
-  (2316, 'Kakashi', 7789678329), 
-  (1234, 'Naruto', 9874356433), 
-  (4234, 'Kay', 7874356433), 
-  (8934, 'Itachi', 8774356433), 
-  (7734, 'Gara', 9877356433), 
-  (8434, 'Sasuke', 9874365433), 
-  (5674, 'Harry', 9874567433), 
-  (1523, 'Tiny', 9874532233), 
-  (8874, 'Tony', 9899356433);
+  (2315, 'Aakash', '6789678329'),
+  (2316, 'Kakashi', '7789678329'), 
+  (1234, 'Naruto', '9874356433'), 
+  (4234, 'Kay', '7874356433'), 
+  (8934, 'Itachi', '8774356433'), 
+  (7734, 'Gara', '9877356433'), 
+  (8434, 'Sasuke', '9874365433'), 
+  (5674, 'Harry', '9874567433'), 
+  (1523, 'Tiny', '9874532233'), 
+  (8874, 'Tony', '9899356433');
   
   update reader set joinned_date='2022-06-15' where reader_id=1234;
   update reader set joinned_date='2022-06-15' where reader_id=2315;
