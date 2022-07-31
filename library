@@ -9,7 +9,7 @@
   book_id int primary key, 
   book_name varchar(20), 
   author varchar(20), 
-  book_edition int, 
+  book_edition varchar(), 
   quantity int
   );
   
@@ -62,24 +62,24 @@
   
   /* Book Table Entry */
   
-  insert into book values (1100, 'many lives many masters', 'Dr. Brian Weiss', 2019, 20),
-  (1101, 'only love is real:- A story of soulmates reunited', 'Dr. Brian Weiss', 2016, 14), 
-  (1103, 'Rajayoga', 'Swami vivekanada', 1896, 8), 
-  (1104, 'English Grammer', 'chris lewis', 2016, 16), 
-  (1105, 'Mathematics', 'michale jordan', 2006, 19), 
-  (1107, 'Fundamental of physics', 'Resnick halliday', 2016, 36), 
-  (1108, 'Hindi', 'shurti mishra', 2022, 23), 
-  (1109, 'philsosophy', 'merchandise', 2014, 29),
-  (1110, 'Never kiss your bestfriend', 'Tanie brar', 2019, 45), 
-  (1111, 'word power', 'Morris', 2007, 67), 
-  (1112, 'Yoga', 'Patanjali', 1987, 34), 
-  (1113, 'Around the world', 'Jordan', 2002, 12), 
-  (1114, 'Learn strive achieve', 'Vardhman', 2009, 29), 
-  (1115, 'Environment', 'Krishana lal', 2005, 38), 
-  (1116, 'Inner engineering', 'Sadhguru', 2022, 98), 
-  (1117, 'Good moral values', 'kevin peterson', 2003, 34), 
-  (1118, 'Trip of the world', 'Martin santner', 2019, 22), 
-  (1119, 'Life is race', 'Kevin lewis', 2014, 43);
+  insert into book values (1100, 'many lives many masters', 'Dr. Brian Weiss', '9th', 20),
+  (1101, 'only love is real:- A story of soulmates reunited', 'Dr. Brian Weiss', '7th', 14), 
+  (1103, 'Rajayoga', 'Swami vivekanada', '10th', 8), 
+  (1104, 'English Grammer', 'chris lewis', '8th', 16), 
+  (1105, 'Mathematics', 'michale jordan', '11th', 19), 
+  (1107, 'Fundamental of physics', 'Resnick halliday', '9th', 36), 
+  (1108, 'Hindi', 'shurti mishra', '6th', 23), 
+  (1109, 'philsosophy', 'merchandise', '8th', 29),
+  (1110, 'Never kiss your bestfriend', 'Tanie brar', '7th', 45), 
+  (1111, 'word power', 'Morris', '11th', 67), 
+  (1112, 'Yoga', 'Patanjali', '14th', 34), 
+  (1113, 'Around the world', 'Jordan', '4th', 12), 
+  (1114, 'Learn strive achieve', 'Vardhman', '14th', 29), 
+  (1115, 'Environment', 'Krishana lal', '11th', 38), 
+  (1116, 'Inner engineering', 'Sadhguru', '13th', 98), 
+  (1117, 'Good moral values', 'kevin peterson', '9th', 34), 
+  (1118, 'Trip of the world', 'Martin santner', '8th', 22), 
+  (1119, 'Life is race', 'Kevin lewis', '17th', 43);
   
   
   
